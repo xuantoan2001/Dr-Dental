@@ -20,7 +20,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Header Begin -->
-        <div class="header">
+        <header class="header">
             <div class="row-header logo-infor" >
                 <div class="col">
                     <a href="#"><img src="image/logo.svg" alt="logo"></a>
@@ -39,7 +39,7 @@
                     <span class="header-infor-text" style="font-size: 16px;font-weight: 400;">24/7 Emergency Phone</span>
                 </div>
             </div>
-        </div>
+        </header>
         <!-- Header End -->
 
         <!-- Navigation Begin-->
@@ -642,6 +642,7 @@
         let slideIndex = 1;
         showSlides(slideIndex);
         
+
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
@@ -664,6 +665,7 @@
           }
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " dot-active";
+          
         }
         </script>
 
