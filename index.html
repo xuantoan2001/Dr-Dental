@@ -177,7 +177,7 @@
                         </div>
                     </div>
                     <div class="book-date-form">
-                        <form onSubmit="if(!confirm('Xác nhận đặt lịch?')){return false;}" autocomplete="off">
+                        <form onSubmit="if(!confirm('Xác nhận đặt lịch?')){return false;}" >
                             <input type="email" id="email" name="email" placeholder="Email của bạn" required>
 
                             <div class="custom-select ">
@@ -394,7 +394,7 @@
                    
                     <span>Mọi thứ sẽ dễ dàng và nhanh chóng hơn, chỉ bằng cách đặt trước thời gian và lựa chọn dịch vụ bạn muốn hỗ trợ để chúng tôi có thể sẵn sàng phục vụ bạn tốt hơn.</span>
                     <hr>
-                    <form class="form-control" autocomplete="off">
+                    <form class="form-control" onSubmit="if(!confirm('Xác nhận đặt lịch?')){return false;}">
                         <div class="input-control">
                             <label>Tên Của Bạn *</label>
                             <input  type="text" id="name" name="name" required>
