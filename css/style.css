@@ -389,21 +389,42 @@ nav {
     float: left;
     width: 44%;
     height: 68%;
-    border: 1px dashed #000000;
+   
     margin-left: 56px;
     box-sizing: border-box;
     border-radius: 50%;
     padding: 59px;
     margin-top: 43px;
+    position: relative;
+    
+   
+  }
+  .book-date-logo .spin-border{
+    width: 100%;
+    height: 100%;
+    padding: 59px;
+    top: 0;
+    left: 0;
+    
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: absolute;
+    border:  1px dashed #000000;
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
   }
   .cricle-logo {
     width: 100%;
     height: 100%;
     background-color: var(--body-color);
     border-radius: 50%;
+    
   }
+ 
   .cricle-logo img {
     margin: 17px;
+  
   }
   .book-date-form {
     width: 294px;
@@ -1261,3 +1282,15 @@ select:focus {
   border: 2px solid var(--btn-color-primary) !important;
 }
 
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+}
