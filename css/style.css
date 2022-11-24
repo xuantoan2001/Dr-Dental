@@ -284,6 +284,7 @@ nav {
   /*feeback-infor*/
   .feeback-infor {
     width: 38%;
+    
     background-color: var(--primary);
     color: white;
     font-weight: 400;
@@ -316,6 +317,7 @@ nav {
   .text-feeback p {
     padding: 0;
     padding: 0px 32px 0px 32px;
+    min-height: 180px;
   }
   .text-feeback p {
     padding: 0;
@@ -328,7 +330,7 @@ nav {
     cursor: pointer;
     height: 16px;
     width: 16px;
-    margin: 0 10px;
+    margin: 0 20px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     display: inline-block;
@@ -841,7 +843,7 @@ nav {
   color: var(--primary);
 
 }
-.form-doctor .form-control input[type=text], select, textarea {
+.form-doctor .form-control input, select, textarea {
   display: inline-block;
   width: 100%;
   padding-left: 12px;
@@ -1031,7 +1033,10 @@ nav {
   background: #1F71A8;
   border-radius: 10px;
 }
-
+.table-time a:hover {
+  cursor: pointer;
+  background-color: var(--btn-color-primary);
+}
 /*main content*/
 
 
@@ -1195,6 +1200,10 @@ footer .nav-icon img {
 }
 
 /*footer*/
+
+/*modal*/
+
+/*modal*/
 .left {
     float: left;
 }

@@ -10,9 +10,12 @@
     <!-- Custom fonts for this template-->
    
     <!-- Custom styles for this template-->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Be Vietnam' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -120,9 +123,8 @@
                         </div>
                         <div class="text-feeback">
                             <p>
-                                “ 2.Trước đây để tìm được một nha khoa uy tín là một vấn đề nan giải đối với gia đình 
-                                chúng tôi, nhưng từ ngày biết đến Dr.Dental mọi vấn đề răng miệng của gia đình tôi đã được giải quyết 
-                                trong sự yên tâm về chất lượng. ”
+                                “ 2.Sau gần 1 năm điều trị cho con ở trung tâm bản thân mình cảm thấy rất hài lòng về dịch vụ 
+                                chăm sóc răng miệng cho con ở đây. Cảm ơn các bác sĩ! ”
                             </p>
                         </div>
                         
@@ -131,7 +133,7 @@
                         </div>
                         <div class="user-feeback">
                             <p>
-                                Gia Đình Chị Ngọc 2 ( Quận 1-Hồ Chí Minh )
+                                Gia Đình Chị Hường  ( Quận 2-Hồ Chí Minh )
                             </p>
                         </div>
                     </div>
@@ -141,9 +143,7 @@
                         </div>
                         <div class="text-feeback">
                             <p>
-                                “ 3. Trước đây để tìm được một nha khoa uy tín là một vấn đề nan giải đối với gia đình 
-                                chúng tôi, nhưng từ ngày biết đến Dr.Dental mọi vấn đề răng miệng của gia đình tôi đã được giải quyết 
-                                trong sự yên tâm về chất lượng. ”
+                                “ 3.  Đi làm đẹp cho thanh niên, một địa chỉ tốt cho niềng răng các bạn ạ ”
                             </p>
                         </div>
                         
@@ -152,7 +152,7 @@
                         </div>
                         <div class="user-feeback">
                             <p>
-                                Gia Đình Chị Ngọc 3 ( Quận 1-Hồ Chí Minh )
+                                Gia Đình Anh Thanh Tâm ( Bình Chánh-Hồ Chí Minh )
                             </p>
                         </div>
                     </div>
@@ -174,8 +174,8 @@
                         </div>
                     </div>
                     <div class="book-date-form">
-                        <form>
-                            <input type="text" id="email" name="email" placeholder="Email của bạn">
+                        <form onSubmit="if(!confirm('Xác nhận đặt lịch?')){return false;}" autocomplete="off">
+                            <input type="email" id="email" name="email" placeholder="Email của bạn" required>
 
                             <div class="custom-select ">
                                 <select id="doctor" name="doctor">
@@ -188,7 +188,7 @@
                             </div>
 
                             <div class="input-container">
-                                <input class="input-field" type="text" id="date" name="date" placeholder="Ngày hẹn">
+                                <input  class="input-field" type="text" id="datepicker" name="date" placeholder="Ngày hẹn" required autocomplete="off" readonly>
                                 <img class="icon" src="image/calendar.ico" width="18px" height="20px">
                             </div>
 
@@ -391,14 +391,14 @@
                    
                     <span>Mọi thứ sẽ dễ dàng và nhanh chóng hơn, chỉ bằng cách đặt trước thời gian và lựa chọn dịch vụ bạn muốn hỗ trợ để chúng tôi có thể sẵn sàng phục vụ bạn tốt hơn.</span>
                     <hr>
-                    <div class="form-control">
+                    <form class="form-control" autocomplete="off">
                         <div class="input-control">
                             <label>Tên Của Bạn *</label>
-                            <input  type="text" id="name" name="name">
+                            <input  type="text" id="name" name="name" required>
                         </div>
                         <div class="input-control">
                             <label>Số Điện Thoại *</label>
-                            <input type="text" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}[0-9]{3}[0-9]{3}"  required>
                         </div>
                         <div class="input-control input-custom">
                             <label>Lựa Chọn Bác Sĩ</label>
@@ -412,10 +412,10 @@
                         </div>
                         <div class="input-control">
                             <label>Ngày Hẹn  *</label>
-                            <input type="text" id="date" name="date">
+                            <input type="text"  name="date" id="datepicker2" readonly required autocomplete="off" required>
                         </div>
                         <button type="submit" class="btn">Đặt Lịch Hẹn</button>
-                    </div>
+                    </form>
                 </div>
 
             </div>
@@ -624,7 +624,7 @@
                         </div>
                         <div class="col" id="col-5">
                             <a href="">Cập nhật thông tin qua email</a>
-                            <input id="email-update" >
+                            <input type="email" id="email-update" >
                         </div>
                 </div>
             </footer>
@@ -632,42 +632,12 @@
         </div>
         <!-- Main Content End-->
 
+        <!--Modal-->
         
-
 
     <!-- End of Page Wrapper -->
     
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          let i;
-          let slides = document.getElementsByClassName("feeback-slide");
-          let dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" dot-active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " dot-active";
-          
-        }
-        </script>
-
+    <script src="js/custom.js"></script>
 </body>
 </html>
